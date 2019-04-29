@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const PORT = process.env.PORT || 3000
+const port = process.env.PORT || 4000
 const bodyParser = require('body-parser')
 const todosRoute = require(`./routes/todo`)
 const signUpRoute = require('./routes/signUp')
@@ -14,6 +14,6 @@ app.use(`/api/todos`, todosRoute)
 app.use('/api/signup', signUpRoute)
 app.use('/api/signin', signInRoute)
 
-app.listen(PORT, ()=>{
-    console.log(`running at ${PORT}`)
+app.listen(port, ()=>{
+    console.log(`running at ${port}`)
 })
